@@ -1,0 +1,238 @@
+/* styles.css */
+
+:root {
+    --clr-body-bg: #372248; /*hsl(0 0% 90%);*/
+    --clr-card-bg: hsl(0 0% 100%);
+    --clr-text: #fff; /*hsl(0 0% 15%);*/
+    --clr-heading-back: #171123; /*hsl(0 0% 25%);*/
+    --clr-heading: #fff;
+    
+    --height-heading: 120px; /* minimum height */
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+  }
+
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;/*Arial, sans-serif;*/
+    /*font-size: 1.25rem;*/
+    line-height: 1.5;
+    background: var(--clr-body-bg);
+    color: var(--clr-text);
+    overflow-x: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 0.5rem;
+}
+
+.body_wrapper {
+    /*background-color: red;*/
+    margin: 0 auto;
+    width: 100%;
+    /*padding: 0px 0rem;*/
+    max-width: 1000px;
+    min-width: 390px;
+    
+}
+
+h1,
+h2,
+h3 {
+    color: var(--clr-heading);
+}
+
+header {
+    background-color: var(--clr-heading-back);
+    display: flex;
+    justify-content: space-between;
+    padding: 0.3rem 1rem;
+    align-items: center;
+    width: 100%;
+    border-right: 4px solid red;
+    max-height: var(--height-heading);
+
+}
+
+/*.logo_block {
+    border-radius: 10px;
+    background-color: aqua;
+    /-*padding: 1rem;*-/
+}*/
+
+.logo {
+    background-color: #DB5461;
+    padding: 1em;
+    border-radius: 10px;
+    border-bottom-right-radius: 90%;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+    /*
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    color: #f7f7f7;*/
+    display: flex;
+    text-decoration: none;
+    font-size: 0.6rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.logo h1 {
+    /*color: blue;*/
+    text-decoration: none;
+    line-height: 1.2;
+}
+
+header ul li {
+    list-style-type: none;
+    font-size: 1rem;
+}
+
+header a {
+    text-decoration: none;
+    color: #f7f7f7;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.nav_menu {
+    gap: 1rem;
+    margin: 0 0.5rem;
+    justify-content: space-around;
+}
+
+.nav_item {
+    font-weight: bolder;
+    padding: 0.5rem;
+}
+
+.nav_link {
+    transition: 0.s ease;
+}
+
+.nav_link:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.hamburger_menu {
+
+    display: none;
+    /*width: 50px;
+    height: 50px;*/
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+}
+
+.nav_buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+@media (max-width: 827px) {
+    .hamburger_menu {
+        display: block;
+        color: #DB5461;
+    }
+
+    .hamburger_menu.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger_menu.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger_menu.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav_menu {
+        position: fixed;
+        left: 600%;
+        top: var(--height-heading);
+        gap: 0;
+        flex-direction: column;
+        /*background-color: #262626;*/
+        width: 0;
+        text-align: center;
+        transition: 0.3s;
+
+        background: rgba(255, 255, 255, 0.5); /* Set a semi-transparent white background */
+        backdrop-filter: blur(10px); /* Apply a 10px blur to the background */
+        border: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .nav_item {
+        margin: 16px 0;
+    }
+    
+    .nav_menu.active {
+        left: 0;
+    }
+
+    header a {
+        color: var(--clr-body-bg);
+    }
+
+    .nav_buttons {
+        display: none;
+    }
+}
+
+/*
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+section {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+*/

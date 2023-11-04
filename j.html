@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Your CV</title>
+  <style>
+    .card {
+      display: flex;
+      align-items: center;
+      margin: 20px;
+      padding: 10px;
+      border: 1px solid #e1e1e1;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .card img {
+      width: 100px;
+      height: 100px;
+      margin-right: 20px;
+    }
+
+    .card-content {
+      flex: 1;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    .expand-button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    .expanded-content {
+      display: none;
+    }
+
+    .expanded {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="your_svg_image.svg" alt="Your Name">
+    <div class="card-content">
+      <h2>Your Name</h2>
+      <p>Business Analyst</p>
+      <button class="expand-button">More Details</button>
+      <div class="expanded-content">
+        <p>Your detailed CV content goes here.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add more similar card elements for other sections of your CV as needed -->
+
+  <script>
+    const expandButtons = document.querySelectorAll('.expand-button');
+    expandButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const expandedContent = button.nextElementSibling;
+        expandedContent.classList.toggle('expanded');
+        button.textContent = expandedContent.classList.contains('expanded') ? 'Less Details' : 'More Details';
+      });
+    });
+  </script>
+</body>
+</html>

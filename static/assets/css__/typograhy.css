@@ -1,0 +1,37 @@
+
+/* Typograhy */
+
+h1,
+h2,
+h3 {
+    line-height: 1.1;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+
+
+
+
+p {
+    max-width: 60ch;
+    line-height: 1.6;
+}
+
+.abbr {
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+}

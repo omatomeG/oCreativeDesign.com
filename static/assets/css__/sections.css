@@ -1,0 +1,315 @@
+:root {
+    --clr-body-bg: #372248; /*hsl(0 0% 90%);*/
+    --clr-card-bg: hsl(0 0% 100%);
+    --clr-text: #fff; /*hsl(0 0% 15%);*/
+    --clr-heading-back: #171123; /*hsl(0 0% 25%);*/
+    --clr-heading: #fff;
+    
+    --height-heading: 120px; /* minimum height */
+    --clr-border-lines: salmon;
+
+}
+
+section {
+    background-color: aqua;
+    border: 2px solid var(--clr-border-lines);
+    padding: 50px 0.5rem;
+    width: 100%;
+}
+
+/*Home Section*/
+
+#home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #414770;
+    border: none;
+}
+
+.right_article, .profile {
+    flex: 1;
+    padding: 20px;
+}
+
+#profile_image {
+    max-width: 100%;
+    height: auto;
+    border: none;
+}
+
+.intro {
+    margin-bottom: 1rem;
+}
+
+.message {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/*About Me page */
+#about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /*align-items: center;*/
+    background-color: #171123;
+    /*background-color: #5B85AA;*/
+    border: none;
+    padding: 20px;
+
+    background-image: url("../images/global/pages/about_pg_img/lighttrans.png");
+    background-repeat: no-repeat;
+    background-position-x: 85%;
+    background-position-y: 50%;
+}
+
+.about_info {
+    /*border: 5px solid red;*/
+    display: flex;
+    flex-direction: row;
+}
+
+.personal_info,
+.experience_info {
+    flex: 1;
+    padding: 5px;
+    /*border: 5px solid green;*/
+    letter-spacing: 1.2px;
+}
+
+
+.personal_info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    /*align-content: center;*/
+    padding: 5px;
+    
+    /*align-items: center;
+    align-self: center;*/
+
+    font-weight: bold;
+
+    /*border: 5px solid green;*/
+}
+
+.text_description {
+    font-weight: lighter;
+    color:orange;
+}
+
+.experience_info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    /*align-content: center;*/
+    padding: 5px;
+    
+    /*align-items: center;
+    align-self: center;*/
+}
+
+.exp_card {
+    border: 2px dashed pink;
+    padding-left: 0.5rem;
+}
+
+.list_personal_info {
+    list-style-type: none;
+}
+
+
+.exp_card ul {
+    padding-left: 1.5rem;
+    list-style-type: none;
+    font-weight: bolder;
+    /*color: black;*/
+}
+
+.exp_card ul li::marker {
+    content: "— "; /* Set the content to the elongated dash and a space */
+    display: inline-block;
+    color: orange;
+    width: 1em;
+    size: 10px;
+    font-weight: bolder;
+}
+
+.yearsOfExperience {
+    font-size: 1.5rem;
+}
+
+.btn.block.elem {
+    /*border: 2px dotted red;*/
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+/*
+.list_experience_info {
+    padding-left: 5rem;
+}*/
+
+.rainbow_text {
+    
+    background: -webkit-linear-gradient(45deg, #ff0000, #ff8000, #ffff00, #00ff00, #0000ff, #9000ff);-webkit-background-clip: text;-webkit-text-fill-color: transparent;
+    background-color: #FFF;
+}
+
+
+#about_skills {
+    display: grid;
+    /*border: 3px solid mediumorchid;*/
+    max-width: 65ch;
+    
+
+    /*padding-left: 1.5em;*/
+    list-style: none;
+}
+
+#about_skills li {
+    padding-bottom: 10px;
+    padding-left: 0rem;
+}
+
+#about_skills li ul {
+    padding-bottom: 0;
+    padding-top: 0;
+    padding-left: 2rem;
+}
+
+.list_bold {
+    font-weight: bolder;
+    color: #f4bc07;
+}
+
+#about p {
+    max-width: 65ch;
+}
+
+/* Skills Page */
+
+#skills {
+    background-color: var(--clr-heading-back);
+    border: none;
+    border-top: 1px dashed var(--clr-border-lines);
+}
+
+.skills_content {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.listcard {
+    flex: 1;
+    background-color: var(--clr-body-bg);
+    padding: 1rem;
+    border-radius: 15px;
+
+    list-style-type: none;
+    /*padding: 0;*/
+    display: flex;
+}
+
+.listcard li {
+    padding-left: 1rem;
+}
+
+.expand_button {
+    text-decoration: underline;
+    /*background-color: #007bff;*/
+}
+
+.collapse_button {
+    display: none;
+}
+
+.expand_button:hover {
+    color: blue;
+    cursor: pointer;
+}
+
+.expanded_content {
+    display: none;
+}
+
+
+/*
+
+.listcard li::before {
+    content: url("../images/global/icons/actionButton/upload.svg");
+    margin-right: 8px;
+    vertical-align: middle;
+}*/
+
+@media (max-width: 858px) {
+    #about {
+      background-image: none;
+    }
+  }
+
+@media (max-width: 768px) {
+
+    /*Home Page*/
+    #home {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .right_article .button {
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .profile {
+        order: -1; /* Change the order of .profile to make it come before .right_article */
+    }
+
+    #profile_image {
+        width: 40%;
+        height: auto;
+        border: none;
+        border-radius: 50%;
+    }
+
+    .message {
+        text-align: center;
+    }
+
+    /*About Page*/
+
+    #about {
+        background-image: none;
+    }
+
+    .about_info {
+        flex-direction: column;
+        /*border: 5px solid rgb(0, 55, 255);*/
+        /*align-items: center;
+        text-align: center;*/
+        /*background-color: black;*/
+    }
+
+    .btn.block.elem {
+        /*border: 2px dotted red;*/
+        margin: 1em auto;
+    }
+
+    /*Skills Page*/
+
+    .skills_content {
+        flex-direction: column;
+    }
+
+}
+
+
+
+
+/*
+.right_article, .profile {
+    flex: 1;
+    padding: 20px;
+}*/

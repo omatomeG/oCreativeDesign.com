@@ -1,0 +1,33 @@
+{
+    "@context": "http://schema.org",
+    "@type": "Recipe",
+    "name": "Delicious Chocolate Cake",
+    "image": "https://www.example.com/images/chocolate-cake.jpg",
+    "author": {
+        "@type": "Person",
+        "name": "John Doe"
+    },
+    "datePublished": "2023-01-15",
+    "description": "A mouthwatering chocolate cake recipe for all occasions.",
+    "recipeYield": "1 cake",
+    "prepTime": "PT15M",
+    "cookTime": "PT30M",
+    "totalTime": "PT45M",
+    "recipeIngredient": [
+        "2 cups all-purpose flour",
+        "1 cup sugar",
+        "1/2 cup cocoa powder",
+        "2 tsp baking powder",
+        "1 tsp vanilla extract",
+        "1 cup milk",
+        "1/2 cup vegetable oil"
+    ],
+    "recipeInstructions": [
+        "Preheat the oven to 350°F (175°C). Grease and flour two 9-inch round cake pans.",
+        "In a large mixing bowl, combine flour, sugar, cocoa, and baking powder. Add vanilla extract, milk, and vegetable oil. Mix until smooth.",
+        "Pour the batter into the prepared cake pans and bake for 30 minutes.",
+        "Let the cakes cool before frosting and serving."
+    ],
+    "recipeCategory": "Dessert",
+    "recipeCuisine": "American"
+}
