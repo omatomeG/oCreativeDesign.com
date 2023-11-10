@@ -8,7 +8,7 @@
     --clr-heading: #fff;
     
     --height-heading: 120px; /* minimum height */
-
+    --clr-heading-alt-back: #0a0909;
 }
 
 * {
@@ -50,7 +50,9 @@ h3 {
 }
 
 header {
-    background-color: var(--clr-heading-back);
+    position: sticky;
+    top: 0;
+    background-color: var(--clr-heading-alt-back);
     display: flex;
     justify-content: space-between;
     padding: 0.3rem 1rem;
